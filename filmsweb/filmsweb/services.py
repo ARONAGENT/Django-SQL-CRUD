@@ -2,7 +2,7 @@ import pymysql
 class FilmsOperations:
 
     def reportFilms(self):
-        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="AVNS_jLvqn4KtNKeQMfTv6yn",port=19414,database="rohandb")
+        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="",port=19414,database="rohandb")
         curs=con.cursor()
         curs.execute("select * from films")
         data=curs.fetchall()
@@ -10,7 +10,7 @@ class FilmsOperations:
         return data
 
     def addnewfilm(self,nm,gen,lang,relyr,rate,desc):
-        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="AVNS_jLvqn4KtNKeQMfTv6yn",port=19414,database="rohandb")
+        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="",port=19414,database="rohandb")
         curs=con.cursor()
         curs.execute("insert into films (filmnm,genre,language,relyr,rating,description) values('%s','%s','%s','%s','%s','%s')" %(nm,gen,lang,relyr,rate,desc))
         con.commit()
@@ -19,7 +19,7 @@ class FilmsOperations:
     
     def retrivelangfilms(self,lang):
         dic={}
-        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="AVNS_jLvqn4KtNKeQMfTv6yn",port=19414,database="rohandb")
+        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="",port=19414,database="rohandb")
         curs=con.cursor()
         curs.execute("select * from films where language='%s'"%lang)
         data=curs.fetchall()
@@ -30,7 +30,7 @@ class FilmsOperations:
 
     def retrivegenfilms(self,gen):
         dic={}
-        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="AVNS_jLvqn4KtNKeQMfTv6yn",port=19414,database="rohandb")
+        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="",port=19414,database="rohandb")
         curs=con.cursor()
         curs.execute("select * from films where genre='%s'"%gen)
         data=curs.fetchall()
@@ -40,7 +40,7 @@ class FilmsOperations:
         return dic
     
     def updateRatingFilms(self,fid,rate):
-        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="AVNS_jLvqn4KtNKeQMfTv6yn",port=19414,database="rohandb")
+        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="",port=19414,database="rohandb")
         curs=con.cursor()
         curs.execute("update films set rating='%s' where filmid=%d"%(rate,fid))
         con.commit()
@@ -48,7 +48,7 @@ class FilmsOperations:
         return "films rating update Successfully"
 
     def deleteFilmById(self,id):
-        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="AVNS_jLvqn4KtNKeQMfTv6yn",port=19414,database="rohandb")
+        con=pymysql.connect(host="rohan-mysql-db-rohandbconnections.c.aivencloud.com",user="avnadmin",password="",port=19414,database="rohandb")
         curs=con.cursor()
         curs.execute("delete from films where filmid=%d "%id)
         con.commit()
