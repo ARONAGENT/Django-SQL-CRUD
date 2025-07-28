@@ -207,40 +207,8 @@ Visit `http://127.0.0.1:8000/` to access the application.
 
 ## 📁 Project Structure
 
-```
-Django-SQL-CRUD/
-├── filmsWeb/
-│   ├── filmsWeb/
-│   │   ├── __init__.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   ├── wsgi.py
-│   │   └── asgi.py
-│   ├── films/                  # Django app
-│   │   ├── migrations/
-│   │   ├── __init__.py
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── models.py
-│   │   ├── views.py
-│   │   ├── urls.py
-│   │   └── tests.py
-│   ├── templates/
-│   │   ├── base.html
-│   │   ├── films_list.html
-│   │   ├── add_film.html
-│   │   └── search_results.html
-│   ├── static/
-│   │   ├── css/
-│   │   │   └── style.css
-│   │   ├── js/
-│   │   │   └── main.js
-│   │   └── images/
-│   └── manage.py
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
+<img width="388" height="632" alt="image" src="https://github.com/user-attachments/assets/3a5742d4-bf5a-4cd5-a4c8-a36ed1fe782b" />
+
 
 ## 🔗 API Endpoints
 
@@ -267,108 +235,6 @@ This project supports the following operations on the films table:
 - **Dynamic Content** - Real-time updates without page refresh
 - **Error Handling** - User-friendly error messages
 
-## 🔒 Database Configuration (Aiven.io)
-
-### Setting up Aiven MySQL
-
-1. **Create Aiven Account**
-   - Visit [Aiven.io](https://aiven.io/)
-   - Sign up for a free account
-
-2. **Create MySQL Service**
-   - Select MySQL service
-   - Choose appropriate plan
-   - Configure service settings
-
-3. **Get Connection Details**
-   ```
-   Host: your-service-name.aivencloud.com
-   Port: 25061
-   Database: defaultdb
-   Username: avnadmin
-   Password: [generated-password]
-   ```
-
-4. **Configure Django Settings**
-   - Update `DATABASES` in `settings.py`
-   - Test connection with `python manage.py dbshell`
-
-## 🧪 Testing
-
-### Manual Testing Checklist
-- [ ] Add new film with all fields
-- [ ] View all films in list format
-- [ ] Search films by genre
-- [ ] Search films by language  
-- [ ] Update film rating
-- [ ] Delete film by ID
-- [ ] Test responsive design on mobile
-- [ ] Validate form inputs
-- [ ] Test AJAX functionality
-
-### Running Tests
-```bash
-python manage.py test
-```
-
-## 🚀 Deployment
-
-### Heroku Deployment
-```bash
-# Install Heroku CLI
-pip install gunicorn
-pip freeze > requirements.txt
-
-# Create Procfile
-echo "web: gunicorn filmsWeb.wsgi" > Procfile
-
-# Deploy to Heroku
-heroku create your-app-name
-git push heroku main
-```
-
-### Environment Variables
-```bash
-# Set environment variables
-heroku config:set DATABASE_URL=your_aiven_mysql_url
-heroku config:set SECRET_KEY=your_secret_key
-heroku config:set DEBUG=False
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how to get started:
-
-1. **Fork the Repository**
-   ```bash
-   git fork https://github.com/ARONAGENT/Django-SQL-CRUD.git
-   ```
-
-2. **Create Feature Branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-
-3. **Make Changes**
-   - Follow Django coding conventions
-   - Add tests for new features
-   - Update documentation
-
-4. **Submit Pull Request**
-   ```bash
-   git commit -m 'Add amazing feature'
-   git push origin feature/amazing-feature
-   ```
-
-### Development Guidelines
-- Follow PEP 8 Python style guide
-- Write meaningful commit messages
-- Add docstrings to functions
-- Test thoroughly before submitting
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Authors & Contributors
 
@@ -394,13 +260,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **GitHub**: [@ARONAGENT](https://github.com/ARONAGENT)
 - **LinkedIn**: [Connect for professional inquiries]
 - **Email**: [Contact via GitHub]
-
-## 📈 Project Statistics
-
-![GitHub stars](https://img.shields.io/github/stars/ARONAGENT/Django-SQL-CRUD?style=social)
-![GitHub forks](https://img.shields.io/github/forks/ARONAGENT/Django-SQL-CRUD?style=social)
-![GitHub issues](https://img.shields.io/github/issues/ARONAGENT/Django-SQL-CRUD)
-![GitHub license](https://img.shields.io/github/license/ARONAGENT/Django-SQL-CRUD)
 
 ---
 
